@@ -60,7 +60,7 @@ app.get('/profile',isLoggedIn, function(req, res) {
     
 })
 //include entry controller
-app.use('/entry', isLoggedIn, require('./controllers/entry'));
+app.use('/entries',isLoggedIn, require('./controllers/entries'));
 
 
 //include auth controller

@@ -15,14 +15,18 @@ const passport = require('../config/ppConfig');
 router.get('/', function(req, res) {
     //connect to db to find all 
 
-    res.render('entries')
+    res.render('entries/allEntries')
 })
 
-//POST route to create new entry
-router.post('/entries/new', function(req, res) {
-    //connect to db to create new entry
-    res.render('newEntry')
+//GET route to create new entry
+router.get('/new', function(req, res) {
+    res.render('entries/newEntry')
 })
+router.post('/new', function(req, res) {
+ //connect to db to create new entry
+ //redirect to profile
+})
+
 
 //export router
 module.exports = router;
