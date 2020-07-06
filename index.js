@@ -59,6 +59,10 @@ app.get('/profile',isLoggedIn, function(req, res) {
     res.render('profile');
     
 })
+//include entry controller
+app.use('/entry', isLoggedIn, require('./controllers/entry'));
+
+
 //include auth controller
 app.use('/auth', require('./controllers/auth'));
 //initizalize app on port
