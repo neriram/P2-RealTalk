@@ -1,8 +1,10 @@
-<form action="/entries" method="POST">
-    <label for="assmt">How are you feeling about the conversation?</label>
-
+<form class="form-group" action="/entries" method="POST">
+    <div class="form-group">
+    <label for="question">How are you feeling about the conversation?</label>
+</div>
+<div class="form-group">
     <label for="feelings">Select a feeling</label>
-    <select id="feelings" name="feelings">
+    <select id="feelings" name="feelings" class="form-control"place>
         <option value="enraged">enraged</option>
         <option value="panicked">panicked</option>
         <option value="stressed">stressed</option>
@@ -29,8 +31,11 @@
         <option value="hopeless">hopeless</option>
         <option value="drained">drained</option>
     </select>
+</div>
+<div class="form-group">
     <label for="entry">Write it out:</label>
-    <textarea name="entry" style="width:500px; height:300px">
+    <textarea name="entry" style="width:500px; height:300px" class="form-control">
     </textarea>
-    <input type="submit">
+</div>
+    <input type="submit" class="btn btn-success">
 </form>
