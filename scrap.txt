@@ -1,0 +1,9 @@
+Entry
+----
+feeling:string,
+content:string,
+sentiment:
+polarity:
+type:
+
+sequelize model:create --name entry --attributes feeling:string,content:string

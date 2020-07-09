@@ -49,6 +49,7 @@ module.exports = function(sequelize, DataTypes) {
     });
     user.associate = function(models) {
         //user associations here
+        models.user.hasMany(models.entry);
     }    
     //take inputed password and compare to hashed password in user table. validPassword definition to validate password at user login
 

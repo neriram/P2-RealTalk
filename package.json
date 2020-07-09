@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
     "connect-flash": "^0.1.1",
     "connect-session-sequelize": "^7.0.0",
@@ -23,7 +24,7 @@
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "pg": "^8.2.1",
+    "pg": "^8.2.2",
     "sequelize": "^6.3.0"
   }
 }
