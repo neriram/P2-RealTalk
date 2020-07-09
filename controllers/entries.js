@@ -28,30 +28,24 @@ router.get('/new', function(req, res) {
 })
 
 //POST route to create new entry
-router.post('/new', function (req, res) {
+router.post('/', function (req, res) {
     //connect to db to create new entry
     db.entry.create({
         feeling: req.body.feeling,
         content: req.body.content
     })
     //make call to api with form information
-    axios.get({
-        method: 'post',
-        url: 'https://sentim-api.herokuapp.com/api/v1/',
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-        },
-        body: { "text": req.body.content }
-        //analyze sentiment of text
-        //render analysis to user
-        //redirect to profile page
-        //  res.redirect('/profile')
+    axios.post('https://sentim-api.herokuapp.com/api/v1/',
+        { "text": req.body.content }
+        //analyzes sentiment of text
 
-    }).then(function (response) {
+    ).then(function (response) {
         console.log(response)
+        //render the info to user
     }).catch(function (error) {
         console.log(error)
+        //redirect to profile page
+        res.redirect('/profile')
     });
 })
 
