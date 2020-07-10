@@ -16,10 +16,14 @@ const axios = require('axios')
 //GET route to view all entries
 router.get('/', function(req, res) {
     //connect to db to find all 
-    db.entry.findAll().then(function (entry){
+    db.entry.findAll({
+        where: {
+            userId: req.user.id
+        }
+    }).then(function (entry){
         console.log(entry)
-    })
-    res.render('entries/allEntries')
+        res.render('entries/allEntries', {entry: entry})
+    }) 
 })
 
 //GET route to create new entry
@@ -32,7 +36,8 @@ router.post('/', function (req, res) {
     //connect to db to create new entry
     db.entry.create({
         feeling: req.body.feeling,
-        content: req.body.content
+        content: req.body.content,
+        userId: req.user.id
     })
     //make call to api with form information
     axios.post('https://sentim-api.herokuapp.com/api/v1/',
