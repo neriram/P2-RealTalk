@@ -1,1 +1,16 @@
-<h3>test</h3>
+<h2>Your Entries</h2>
+
+<div class="entry-container">
+    <h4>How you're feeling about the conversation:</h4><p><%= feeling %></p>
+    <h4>What you wrote:</h4> <p><%= content %></p>
+    <h4>Sentiment Analysis</h4>
+    
+    <%= response.result.polarity %>
+    <%= response.result.type %>
+
+    <% response.sentences.forEach(sentence => { %>
+        <p><%= response %></p>
+
+   <% }) %>
+
+</div>

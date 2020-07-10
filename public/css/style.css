@@ -1,11 +1,52 @@
-h1{
+h1 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 75px;
     text-align: left;
 }
+h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+h2:before,
+h2:after {
+    content: '';
+    border-top: 2px solid black;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+h2:after {
+    margin: 0 0 0 20px;
+}
 .nav {
     font-family: 'Roboto', sans-serif;
     text-align: right;
+}
+.container {
+    padding-top: 50px;
+}
+.entry-container {
+    background-color: rgb(104, 226, 200);
+}
+.welcome-user {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #dfe1e5;
+}
+.form-group {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+#journal{
+    width: 100%;
+    resize: none;
 }
 body {
     font-family: Helvetica, sans-serif;

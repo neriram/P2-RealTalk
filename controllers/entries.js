@@ -40,8 +40,13 @@ router.post('/', function (req, res) {
         //analyzes sentiment of text
 
     ).then(function (response) {
-        console.log(response)
-        //render the info to user
+        console.log(response.data)
+        //render the data response from API to user in allEntries.ejs view
+        res.render('entries/allEntries', {
+            feeling: req.body.feeling,
+            content: req.body.content,
+            response: response.data
+        })
     }).catch(function (error) {
         console.log(error)
         //redirect to profile page
