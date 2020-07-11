@@ -4,15 +4,5 @@
     <h4>How you're feeling about the conversation:</h4><p><%= feeling %></p>
     <h4>What you wrote:</h4> <p><%= content %></p>
     <h4>Sentiment Analysis</h4>
-    
-    <%= response.result.polarity %>
-    <%= response.result.type %>
-
-    
-
-    <% response.sentences.forEach(sentence => { %>
-        <p><%= response %></p>
-
-   <% }) %>
-
+    <h4>Based on what you wrote, it sounds like this topic is:</h4><%= response.result.type %> <%= response.result.polarity %>
 </div>
