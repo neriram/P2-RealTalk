@@ -3,6 +3,7 @@ h1 {
     font-size: 75px;
     text-align: left;
 }
+
 h2 {
     display: flex;
     width: 100%;
@@ -31,9 +32,7 @@ h2:after {
 .container {
     padding-top: 50px;
 }
-.entry-container {
-    
-}
+
 .welcome-user {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -48,16 +47,18 @@ h2:after {
     width: 100%;
     resize: none;
 }
+
 body {
     font-family: Helvetica, sans-serif;
     padding: 5%;
     text-align: center;
   }
+
 .carousel {
     background-color: black;
     margin-top: 20px;
-
 }
+
 .carousel-item {
     text-align: center;
     max-height: 580px;
@@ -80,14 +81,16 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
 .chatlogs.chatlogs:: -webkit-scrollbar {
     width: 10px;
 }
+
 .chatlogs:: -webkit-scrollbar-thumb {
    border-radius: 5px; 
    background: rgba(0,0,0,.1);
-
 }
+
 .chat {
     display: flex;
     flex-flow: row wrap;
@@ -118,8 +121,8 @@ body {
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
-
 }
+
 .chat-form textarea {
     background: #dfe1e5;
     width: 75%;
@@ -141,5 +144,4 @@ body {
     margin: 25px 25px;
     border: solid 2px white;
     border-radius: 5px;
-
 }
