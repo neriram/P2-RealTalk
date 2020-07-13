@@ -11,21 +11,6 @@ const passport = require('../config/ppConfig');
 //require axios
 const axios = require('axios')
 
-
-
-//GET route to view all entries
-router.get('/', function(req, res) {
-    //connect to db to find all 
-    db.entry.findAll({
-        where: {
-            userId: req.user.id
-        }
-    }).then(function (entry){
-        console.log(entry)
-        res.render('entries/allEntries', {entry: entry})
-    }) 
-})
-
 //GET route to create new entry
 router.get('/new', function(req, res) {
     res.render('entries/newEntry')

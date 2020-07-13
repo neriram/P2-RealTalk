@@ -3,6 +3,7 @@
 <div class="entry-container">
     <h4>How you're feeling about the conversation:</h4><p><%= feeling %></p>
     <h4>What you wrote:</h4> <p><%= content %></p>
-    <h4>Sentiment Analysis</h4>
-    <h4>Based on what you wrote, it sounds like this topic is:</h4><%= response.result.type %> <%= response.result.polarity %>
+    
+    <h4>Based on what you wrote, it sounds like this topic is:</h4>
+    <%= response.result.type %> with a rating of <%= response.result.polarity %>
 </div>
